@@ -17,16 +17,15 @@ import random
 from typing import Any
 
 from plugin.sdk.plugin import (
+    Err,
     NekoPluginBase,
+    Ok,
+    SdkError,
+    lifecycle,
     neko_plugin,
     plugin_entry,
-    lifecycle,
-    Ok,
-    Err,
-    SdkError,
 )
 from plugin.sdk.shared.i18n import tr
-
 
 _REACT_LINES: dict[str, list[str]] = {
     "shy": ["呀！怎、怎么突然拍我啦…", "头发没乱吧…？", "别、别拍了啦…"],
